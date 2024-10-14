@@ -1,7 +1,6 @@
 package com.cutanddry.qa.functions;
 
 import com.cutanddry.qa.pages.PayPage;
-import com.cutanddry.qa.pages.SettingsPage;
 
 public class Pay {
     static PayPage payPage = new PayPage();

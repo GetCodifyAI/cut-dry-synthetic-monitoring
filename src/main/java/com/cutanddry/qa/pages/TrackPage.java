@@ -54,10 +54,10 @@ public class TrackPage extends LoginPage{
     }
     public boolean isTrackNotificationsTextDisplayed(){
         try {
-            distributorUI.waitForVisibility(txt_trackMon);
+            distributorUI.waitForVisibility(txt_trackNotif);
         } catch (Exception e){
             return false;
         }
-        return distributorUI.isDisplayed(txt_trackMon);
+        return distributorUI.isDisplayed(txt_trackNotif);
     }
 }

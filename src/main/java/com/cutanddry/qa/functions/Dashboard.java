@@ -88,4 +88,7 @@ public class Dashboard {
     public static void navigateToPay() {
         dashboardPage.clickOnPay();
     }
+    public static void navigateToReports() {
+        dashboardPage.clickOnReports();
+    }
 }
