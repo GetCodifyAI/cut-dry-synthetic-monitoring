@@ -79,4 +79,7 @@ public class Dashboard {
     public static void navigateToTrackRoutes() {
         dashboardPage.clickOnTrackRoutes();
     }
+    public static void navigateToTrackMonitoring() {
+        dashboardPage.clickOnTrackMonitoring();
+    }
 }

@@ -8,6 +8,8 @@ public class TrackPage extends LoginPage{
     By btn_addTrucks = By.xpath("//button[@type='button' and contains(text(), 'Add Truck')]");
     By tb_drivers =By.xpath("//a[@role='tab' and @data-rb-event-key='Drivers' and text()='Drivers']");
     By tb_trucks =By.xpath("//a[@role='tab' and @data-rb-event-key='Trucks' and text()='Trucks']");
+    By txt_trackRoutes = By.xpath("//li[contains(text(),'Routes')]");
+    By txt_trackMon = By.xpath("//li[contains(text(),'Routes')]");
 
     public boolean isTrackResourcesTextDisplayed(){
         try {
@@ -33,5 +35,20 @@ public class TrackPage extends LoginPage{
         distributorUI.waitForVisibility(tb_drivers);
         distributorUI.click(tb_drivers);
     }
-
+    public boolean isTrackRoutesTextDisplayed(){
+        try {
+            distributorUI.waitForVisibility(txt_trackRoutes);
+        } catch (Exception e){
+            return false;
+        }
+        return distributorUI.isDisplayed(txt_trackRoutes);
+    }
+    public boolean isTrackMonitoringTextDisplayed(){
+        try {
+            distributorUI.waitForVisibility(txt_trackMon);
+        } catch (Exception e){
+            return false;
+        }
+        return distributorUI.isDisplayed(txt_trackMon);
+    }
 }

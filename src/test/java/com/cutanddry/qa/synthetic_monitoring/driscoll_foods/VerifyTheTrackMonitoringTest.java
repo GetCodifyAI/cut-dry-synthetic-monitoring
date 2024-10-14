@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class VerifyTheTrackRoutesTest extends TestBase {
+public class VerifyTheTrackMonitoringTest extends TestBase {
     static User user;
     static String DP = "Driscoll Foods";
 
@@ -23,14 +23,14 @@ public class VerifyTheTrackRoutesTest extends TestBase {
     }
 
     @Test
-    public void VerifyTheTrackRoutes() throws InterruptedException {
+    public void VerifyTheTrackMonitoring() throws InterruptedException {
         SoftAssert softAssert = new SoftAssert();
         Login.logIntoRestaurantProd(user.getEmailOrMobile(), user.getPassword());
         softAssert.assertTrue(Dashboard.isUserNavigatedToRestaurantDashboard(),"login error");
         Login.navigateToDistributorPortalProd(DP);
         softAssert.assertTrue(Dashboard.isUserNavigatedToDashboard(),"navigation error");
-        Dashboard.navigateToTrackRoutes();
-        softAssert.assertTrue(Track.isRoutesTextDisplayed(),"navigation to track routes error");
+        Dashboard.navigateToTrackMonitoring();
+        softAssert.assertTrue(Track.isMonitoringTextDisplayed(),"navigation to track monitoring error");
         softAssert.assertAll();
     }
 
