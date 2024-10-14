@@ -57,6 +57,8 @@ public class BoostPage extends LoginPage {
     By txt_active = By.xpath("//div[text()='Active']");
     By txt_hidden = By.xpath("//div[text()='Hidden']");
     By img_banner = By.xpath("//div[contains(@class, 'carousel-item')]//img");
+    By btn_createFeaturedLists = By.xpath("//button[text()='Create New Featured List']");
+    By tab_featuredLists = By.xpath("//a[text()='Featured Lists']");
 
     public boolean isBoostTextDisplayed() {
         try {
@@ -256,5 +258,16 @@ public class BoostPage extends LoginPage {
     public boolean isPrimaryBannerDisplayed() {
         distributorUI.waitForVisibility(img_banner);
         return distributorUI.isDisplayed(img_banner);
+    }
+    public boolean isAddMsgDisplayed() {
+        distributorUI.waitForClickability(btn_addMessage);
+        return distributorUI.isDisplayed(btn_addMessage);
+    }
+    public void clickFeaturedLists() {
+        distributorUI.click(tab_featuredLists);
+    }
+    public boolean isFeaturedTabDisplayed() {
+        distributorUI.waitForClickability(btn_createFeaturedLists);
+        return distributorUI.isDisplayed(btn_createFeaturedLists);
     }
 }

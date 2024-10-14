@@ -165,4 +165,13 @@ public class Boost {
     public static boolean isPrimaryBannerDisplayed(){
         return boostPage.isPrimaryBannerDisplayed();
     }
+    public static boolean isBroadcastAddMsgDisplayed() {
+        return boostPage.isAddMsgDisplayed();
+    }
+    public static void clickFeaturedLists(){
+        boostPage.clickFeaturedLists();
+    }
+    public static boolean isFeaturedTabDisplayed(){
+        return boostPage.isFeaturedTabDisplayed();
+    }
 }
