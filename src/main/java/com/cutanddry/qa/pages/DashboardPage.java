@@ -33,6 +33,7 @@ public class DashboardPage extends LoginPage{
     By btn_trackResources = By.xpath("//div[@arrowprops]//a[text()='Resources']");
     By btn_trackRoutes = By.xpath("//div[@arrowprops]//a[text()='Routes']");
     By btn_trackMonitoring = By.xpath("//div[@arrowprops]//a[text()='Monitoring']");
+    By btn_trackNotifications = By.xpath("//div[@arrowprops]//a[text()='Notifications']");
 
     public boolean isDashboardTextDisplayed(){
         try {
@@ -168,6 +169,12 @@ public class DashboardPage extends LoginPage{
         distributorUI.click(btn_trackRoutes);
     }
     public void clickOnTrackMonitoring(){
+        distributorUI.scrollToElement(btn_track);
+        distributorUI.clickUsingJavaScript(btn_track);
+        distributorUI.hoverOverElement(btn_trackMonitoring);
+        distributorUI.click(btn_trackMonitoring);
+    }
+    public void clickOnTrackNotifications(){
         distributorUI.scrollToElement(btn_track);
         distributorUI.clickUsingJavaScript(btn_track);
         distributorUI.hoverOverElement(btn_trackMonitoring);

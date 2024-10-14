@@ -27,4 +27,7 @@ public class Track {
     public static boolean isMonitoringTextDisplayed(){
         return trackPage.isTrackMonitoringTextDisplayed();
     }
+    public static boolean isNotificationsTextDisplayed(){
+        return trackPage.isTrackNotificationsTextDisplayed();
+    }
 }

@@ -82,4 +82,7 @@ public class Dashboard {
     public static void navigateToTrackMonitoring() {
         dashboardPage.clickOnTrackMonitoring();
     }
+    public static void navigateToTrackNotifications() {
+        dashboardPage.clickOnTrackNotifications();
+    }
 }
