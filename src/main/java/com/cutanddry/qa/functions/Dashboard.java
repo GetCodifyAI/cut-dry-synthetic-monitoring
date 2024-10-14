@@ -85,4 +85,7 @@ public class Dashboard {
     public static void navigateToTrackNotifications() {
         dashboardPage.clickOnTrackNotifications();
     }
+    public static void navigateToPay() {
+        dashboardPage.clickOnPay();
+    }
 }
