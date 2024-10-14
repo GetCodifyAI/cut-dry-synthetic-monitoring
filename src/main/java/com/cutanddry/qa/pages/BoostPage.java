@@ -267,7 +267,7 @@ public class BoostPage extends LoginPage {
         distributorUI.click(tab_featuredLists);
     }
     public boolean isFeaturedTabDisplayed() {
-        distributorUI.waitForClickability(btn_createFeaturedLists);
+        distributorUI.waitForVisibility(btn_createFeaturedLists);
         return distributorUI.isDisplayed(btn_createFeaturedLists);
     }
 }
