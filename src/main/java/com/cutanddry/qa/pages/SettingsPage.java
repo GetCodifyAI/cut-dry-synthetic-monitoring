@@ -225,6 +225,5 @@ public class SettingsPage extends LoginPage{
         }
         distributorUI.waitForCustom(2000);
         return distributorUI.isDisplayed(txt_trackSettings);
-
     }
 }
