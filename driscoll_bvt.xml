@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="bvt suit" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="com.cutanddry.qa.utils.RetryTransformer"/>
+        <listener class-name="com.cutanddry.qa.utils.TestNGListener"/>
+        <listener class-name="com.cutanddry.qa.utils.AIOSampleUIMethodListener"/>
+    </listeners>
+    <test name="distributor tests">
+        <classes>
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheDashboardTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyCustomerOrderGuideTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyCustomerCatalogTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyCustomerEditTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyCustomerSearchTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheCatalogTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheCatalogSearchTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheOrdersTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheDraftsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheChatTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheReportsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheSupportTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTeamSettingsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyProfileSettingsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyOrdersSettingsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyBillingSettingsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyCompanySettingsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheBoostSectionTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyThePaySectionTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTrackSettingsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheTrackRoutesTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheTrackResourcesTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheTrackNotificationsTest" />
+            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheTrackMonitoringTest" />
+        </classes>
+    </test>
+</suite>
