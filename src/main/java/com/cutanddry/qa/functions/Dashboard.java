@@ -91,4 +91,16 @@ public class Dashboard {
     public static void navigateToReports() {
         dashboardPage.clickOnReports();
     }
+    public static void navigateToCompanySettings() {
+        dashboardPage.clickOnCompanySettings();
+    }
+    public static void navigateToBillingSettings() {
+        dashboardPage.clickOnBillingSettings();
+    }
+    public static void navigateToTrackSettings() {
+        dashboardPage.clickOnTrackSettings();
+    }
+    public static void navigateToProfileSettings() {
+        dashboardPage.clickOnProfileSettings();
+    }
 }

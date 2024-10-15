@@ -36,6 +36,10 @@ public class DashboardPage extends LoginPage{
     By btn_trackNotifications = By.xpath("//div[@arrowprops]//a[text()='Notifications']");
     By btn_pay  =By.xpath("//a[@data-tip='Payments']");
     By btn_reports  =By.xpath("//a[@data-tip='Reports']");
+    By btn_trackSettings = By.xpath("//div[@arrowprops]//a[text()='Track']");
+    By btn_profSettings = By.xpath("//div[@arrowprops]//a[text()='Profile']");
+    By btn_companySettings = By.xpath("//div[@arrowprops]//a[text()='Company']");
+    By btn_billingSettings = By.xpath("//div[@arrowprops]//a[text()='Billing']");
 
     public boolean isDashboardTextDisplayed(){
         try {
@@ -187,5 +191,29 @@ public class DashboardPage extends LoginPage{
     }
     public void clickOnReports(){
         distributorUI.click(btn_reports);
+    }
+    public void clickOnBillingSettings(){
+        distributorUI.scrollToElement(btn_settings);
+        distributorUI.clickUsingJavaScript(btn_settings);
+        distributorUI.hoverOverElement(btn_billingSettings);
+        distributorUI.click(btn_billingSettings);
+    }
+    public void clickOnCompanySettings(){
+        distributorUI.scrollToElement(btn_settings);
+        distributorUI.clickUsingJavaScript(btn_settings);
+        distributorUI.hoverOverElement(btn_companySettings);
+        distributorUI.click(btn_companySettings);
+    }
+    public void clickOnTrackSettings(){
+        distributorUI.scrollToElement(btn_settings);
+        distributorUI.clickUsingJavaScript(btn_settings);
+        distributorUI.hoverOverElement(btn_trackSettings);
+        distributorUI.click(btn_trackSettings);
+    }
+    public void clickOnProfileSettings(){
+        distributorUI.scrollToElement(btn_settings);
+        distributorUI.clickUsingJavaScript(btn_settings);
+        distributorUI.hoverOverElement(btn_profSettings);
+        distributorUI.click(btn_profSettings);
     }
 }

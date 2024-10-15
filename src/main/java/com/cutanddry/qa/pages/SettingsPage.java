@@ -29,6 +29,10 @@ public class SettingsPage extends LoginPage{
     By txt_removePopup = By.xpath("//h2[text()='Are you sure you want to remove this user?']");
     By btn_Yes = By.xpath("//button[text()='Yes']");
     String txt_userField = "//td[text()='USER']";
+    By txt_companySettings = By.xpath("//h2[text()='Company']");
+    By txt_profSettings = By.xpath("//h2[text()='Profile']");
+    By txt_trackSettings = By.xpath("//h2[text()='Track']");
+    By txt_billingSettings = By.xpath("//h2[text()='Billing']");
 
     public boolean isOrderSettingsTextDisplayed(){
         try {
@@ -182,5 +186,45 @@ public class SettingsPage extends LoginPage{
     public void clickOnUser(String user) {
         distributorUI.waitForClickability(By.xpath(txt_userField.replace("USER", user)));
         distributorUI.click(By.xpath(txt_userField.replace("USER", user)));
+    }
+    public boolean isCompanySettingsTextDisplayed() throws InterruptedException {
+        try {
+            distributorUI.waitForVisibility(txt_companySettings);
+        } catch (Exception e){
+            return false;
+        }
+        distributorUI.waitForCustom(2000);
+        return distributorUI.isDisplayed(txt_companySettings);
+
+    }
+    public boolean isBillingSettingsTextDisplayed() throws InterruptedException {
+        try {
+            distributorUI.waitForVisibility(txt_billingSettings);
+        } catch (Exception e){
+            return false;
+        }
+        distributorUI.waitForCustom(2000);
+        return distributorUI.isDisplayed(txt_billingSettings);
+
+    }
+    public boolean isProfileSettingsTextDisplayed() throws InterruptedException {
+        try {
+            distributorUI.waitForVisibility(txt_profSettings);
+        } catch (Exception e){
+            return false;
+        }
+        distributorUI.waitForCustom(2000);
+        return distributorUI.isDisplayed(txt_profSettings);
+
+    }
+    public boolean isTrackSettingsTextDisplayed() throws InterruptedException {
+        try {
+            distributorUI.waitForVisibility(txt_trackSettings);
+        } catch (Exception e){
+            return false;
+        }
+        distributorUI.waitForCustom(2000);
+        return distributorUI.isDisplayed(txt_trackSettings);
+
     }
 }
