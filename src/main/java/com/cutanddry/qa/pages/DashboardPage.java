@@ -41,6 +41,7 @@ public class DashboardPage extends LoginPage{
     By btn_companySettings = By.xpath("//div[@arrowprops]//a[text()='Company']");
     By btn_billingSettings = By.xpath("//div[@arrowprops]//a[text()='Billing']");
     By btn_support = By.xpath("//a[@data-tip='Support']");
+    By btn_tracker  =By.xpath("//a[@data-tip='Tracker']");
 
     public boolean isDashboardTextDisplayed(){
         try {
@@ -221,5 +222,7 @@ public class DashboardPage extends LoginPage{
         String url = distributorUI.getText(btn_support,"href");
         distributorUI.navigateToURL(url);
     }
-
+    public void clickOnTracker(){
+        distributorUI.click(btn_tracker);
+    }
 }

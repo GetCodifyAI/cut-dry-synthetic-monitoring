@@ -106,4 +106,7 @@ public class Dashboard {
     public static void navigateToSupport() {
         dashboardPage.clickOnSupport();
     }
+    public static void navigateToTracker() {
+        dashboardPage.clickOnTracker();
+    }
 }

@@ -8,6 +8,7 @@
     <test name="synthetic monitoring tests">
         <classes>
             <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyTheDashboardTest" />
+<!--            <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods" />-->
             <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyCustomerOrderGuideTest" />
             <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyCustomerCatalogTest" />
             <class name="com.cutanddry.qa.synthetic_monitoring.driscoll_foods.VerifyCustomerEditTest" />
