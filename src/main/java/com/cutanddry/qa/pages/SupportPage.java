@@ -8,11 +8,8 @@ public class SupportPage extends TestBase {
     By support_center = By.xpath("//div[@class='hf-header-support-center-name']");
 
     public boolean isSupportCenterHeaderDisplayed(){
-        String url = distributorUI.getText(support_icon,"href");
-        try {
-            return distributorUI.navigateToURL(url).isDisplayed(support_center);
-        } catch (Exception e){
-            return false;
-        }
+        distributorUI.waitForVisibility(support_center);
+        return distributorUI.isDisplayed(support_center);
     }
+
 }

@@ -217,6 +217,9 @@ public class DashboardPage extends LoginPage{
         distributorUI.hoverOverElement(btn_profSettings);
         distributorUI.click(btn_profSettings);
     }
-    public void clickOnSupport(){ distributorUI.click(btn_support); }
+    public void clickOnSupport(){
+        String url = distributorUI.getText(btn_support,"href");
+        distributorUI.navigateToURL(url);
+    }
 
 }

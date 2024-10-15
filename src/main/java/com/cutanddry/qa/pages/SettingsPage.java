@@ -29,10 +29,10 @@ public class SettingsPage extends LoginPage{
     By txt_removePopup = By.xpath("//h2[text()='Are you sure you want to remove this user?']");
     By btn_Yes = By.xpath("//button[text()='Yes']");
     String txt_userField = "//td[text()='USER']";
-    By txt_companySettings = By.xpath("//h2[text()='Company']");
+    By txt_companySettings = By.xpath("//h2[text()='Company Settings']");
     By txt_profSettings = By.xpath("//h2[text()='Profile']");
-    By txt_trackSettings = By.xpath("//h2[text()='Track']");
-    By txt_billingSettings = By.xpath("//h2[text()='Billing']");
+    By txt_trackSettings = By.xpath("//h2[text()='Delivery Settings']");
+    By txt_billingSettings = By.xpath("//h2[text()='Billing Settings']");
 
     public boolean isOrderSettingsTextDisplayed(){
         try {
