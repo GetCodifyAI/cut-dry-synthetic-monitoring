@@ -40,6 +40,7 @@ public class DashboardPage extends LoginPage{
     By btn_profSettings = By.xpath("//div[@arrowprops]//a[text()='Profile']");
     By btn_companySettings = By.xpath("//div[@arrowprops]//a[text()='Company']");
     By btn_billingSettings = By.xpath("//div[@arrowprops]//a[text()='Billing']");
+    By btn_support = By.xpath("//a[@data-tip='Support']");
 
     public boolean isDashboardTextDisplayed(){
         try {
@@ -216,4 +217,6 @@ public class DashboardPage extends LoginPage{
         distributorUI.hoverOverElement(btn_profSettings);
         distributorUI.click(btn_profSettings);
     }
+    public void clickOnSupport(){ distributorUI.click(btn_support); }
+
 }

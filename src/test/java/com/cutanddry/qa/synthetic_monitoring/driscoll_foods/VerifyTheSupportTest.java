@@ -2,10 +2,7 @@ package com.cutanddry.qa.synthetic_monitoring.driscoll_foods;
 
 import com.cutanddry.qa.base.TestBase;
 import com.cutanddry.qa.data.models.User;
-import com.cutanddry.qa.functions.Dashboard;
-import com.cutanddry.qa.functions.Draft;
-import com.cutanddry.qa.functions.Login;
-import com.cutanddry.qa.functions.Orders;
+import com.cutanddry.qa.functions.*;
 import com.cutanddry.qa.utils.JsonUtil;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -29,8 +26,8 @@ public class VerifyTheSupportTest extends TestBase {
         Login.logIntoRestaurantProd(user.getEmailOrMobile(), user.getPassword());
         softAssert.assertTrue(Dashboard.isUserNavigatedToRestaurantDashboard(),"login error");
         Login.navigateToDistributorPortalProd(DP);
-
-
+        Dashboard.navigateToSupport();
+        softAssert.assertTrue(Support.isSupportCenterHeaderDisplayed(),"navigation error");
         softAssert.assertAll();
     }
 
