@@ -24,7 +24,7 @@ public class VerifyCustomerOrderGuideTest extends TestBase {
     }
 
     @Test
-    public void VerifyCustomerOrderGuideTest() throws InterruptedException {
+    public void VerifyCustomerOrderGuide() throws InterruptedException {
         SoftAssert softAssert = new SoftAssert();
         Login.logIntoRestaurantProd(user.getEmailOrMobile(), user.getPassword());
         softAssert.assertTrue(Dashboard.isUserNavigatedToRestaurantDashboard(),"login error");
@@ -35,6 +35,7 @@ public class VerifyCustomerOrderGuideTest extends TestBase {
         softAssert.assertTrue(Customer.isCustomerSearchResultByCodeDisplayed(customerId),"search error");
         Customer.clickOnOrderGuide(customerId);
         softAssert.assertTrue(Customer.isNavigatedToOrderGuide(),"order guide navigation error");
+        softAssert.assertEquals(Customer.getCountZeroPriceItemsDisplayed(),0);
         softAssert.assertAll();
     }
 
