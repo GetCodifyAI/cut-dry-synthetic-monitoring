@@ -32,10 +32,11 @@ jobs:
             sudo apt-get install -y google-chrome-stable
             google-chrome --version
       - run:
-          name: Build and run tests
-          command: |
-            mvn clean test -Dsurefire.suiteXmlFiles=driscollSynMon.xml -Drun.headless=true -Dtest.env=prod
-            mvn clean test -Dsurefire.suiteXmlFiles=southwestSynMon.xml -Drun.headless=true -Dtest.env=prod
+          name: Build and run tests (Driscoll)
+          command: mvn clean test -Dsurefire.suiteXmlFiles=driscollSynMon.xml -Drun.headless=true -Dtest.env=prod
+      - run:
+          name: Build and run tests (Southwest)
+          command: mvn clean test -Dsurefire.suiteXmlFiles=southwestSynMon.xml -Drun.headless=true -Dtest.env=prod
       - store_artifacts:
           path: target/surefire-reports
           destination: build-and-test-artifacts
