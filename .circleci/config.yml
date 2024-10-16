@@ -33,7 +33,9 @@ jobs:
             google-chrome --version
       - run:
           name: Build and run tests
-          command: mvn clean test -Dsurefire.suiteXmlFiles=driscollSynMon.xml -Drun.headless=true -Dtest.env=prod
+          command: |
+            mvn clean test -Dsurefire.suiteXmlFiles=driscollSynMon.xml -Drun.headless=true -Dtest.env=prod
+            mvn clean test -Dsurefire.suiteXmlFiles=southwestSynMon.xml -Drun.headless=true -Dtest.env=prod
       - store_artifacts:
           path: target/surefire-reports
           destination: build-and-test-artifacts
