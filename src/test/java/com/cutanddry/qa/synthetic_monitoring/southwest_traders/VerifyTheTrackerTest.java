@@ -1,8 +1,10 @@
-package com.cutanddry.qa.synthetic_monitoring.driscoll_foods;
+package com.cutanddry.qa.synthetic_monitoring.southwest_traders;
 
 import com.cutanddry.qa.base.TestBase;
 import com.cutanddry.qa.data.models.User;
-import com.cutanddry.qa.functions.*;
+import com.cutanddry.qa.functions.Dashboard;
+import com.cutanddry.qa.functions.Login;
+import com.cutanddry.qa.functions.Tracker;
 import com.cutanddry.qa.utils.JsonUtil;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -12,7 +14,7 @@ import org.testng.asserts.SoftAssert;
 
 public class VerifyTheTrackerTest extends TestBase {
     static User user;
-    static String DP = "Driscoll Foods";
+    static String DP = "Southwest Traders";
 
     @BeforeMethod
     public void setUp(){
