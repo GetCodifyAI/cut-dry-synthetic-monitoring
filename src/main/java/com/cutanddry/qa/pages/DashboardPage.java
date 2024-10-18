@@ -42,6 +42,9 @@ public class DashboardPage extends LoginPage{
     By btn_billingSettings = By.xpath("//div[@arrowprops]//a[text()='Billing']");
     By btn_support = By.xpath("//a[@data-tip='Support']");
     By btn_tracker  =By.xpath("//a[@data-tip='Tracker']");
+    By btn_endlAisle  =By.xpath("//a[@data-tip='Endless Aisle']");
+    By btn_creditReq  =By.xpath("//a[@data-tip='Credit Requests']");
+
 
     public boolean isDashboardTextDisplayed(){
         try {
@@ -224,5 +227,11 @@ public class DashboardPage extends LoginPage{
     }
     public void clickOnTracker(){
         distributorUI.click(btn_tracker);
+    }
+    public void clickOnEndlessAisle(){
+        distributorUI.click(btn_endlAisle);
+    }
+    public void clickOnCreditRequest(){
+        distributorUI.click(btn_creditReq);
     }
 }

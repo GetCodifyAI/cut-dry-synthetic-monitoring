@@ -109,4 +109,10 @@ public class Dashboard {
     public static void navigateToTracker() {
         dashboardPage.clickOnTracker();
     }
+    public static void navigateToEndlessAisle() {
+        dashboardPage.clickOnEndlessAisle();
+    }
+    public static void navigateToCreditRequest() {
+        dashboardPage.clickOnCreditRequest();
+    }
 }
